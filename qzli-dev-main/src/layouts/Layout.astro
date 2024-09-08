@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<!-- 
+		<meta name="description" content="Qinzhao Li developer portfolio" />
+		<meta name="author" content="Qinzhao Li" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		-->
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<!-- <title>Qinzhao Li | Self Proclaimed Dev</title>-->
+		
+	</head>
+	<body>
+		<slot />
+<!-- 
+		<div class="flex-container">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+		</div>
+-->
+		<a href="level1">
+		<div class="button1">
+        <button><img src="button1.png" alt= "level1"></button>
+		</div>
+		</a>
+
+		<a> 
+		<div class="button2">
+        <button><img src="button2.png"alt = "level2"></button>
+		</div>
+		</a>
+
+		<a href="link">
+		<div class="button2">
+        <button><img src="button3.png" alt="level1"></button>
+		</div>
+		</a>
+		
+	</body>
+</html>
+
+
+<style is:global>
+	body {
+		background-image: url("background.png");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		height: 100vh;
+		margin:0;
+		width:100%;
+	}
+	
+/*for the next page
+	.flex-container{
+		display: flex;
+		flex-wrap: nowrap;
+		background-color: Dodgerblue;
+	}
+*/
+
+	.button1{
+    /*have it middle*/
+		position:fixed;
+    	width: 400px;
+    	height: 400px;
+		top: 75%;
+		left: 36.5%;
+		transform:translate(-50%, -50%);
+
+	}
+
+	.button2{
+	/*	position:static;
+    /*have it middle*/
+		position:fixed;
+    	width: 400px;
+    	height: 400px;
+		top: 95%;
+		left: 58.5%;
+		transform:translate(-50%, -50%);
+	}
+
+	.button3{
+		position:fixed;
+    	width: 200px;
+    	height: 200px;
+		top: 85%;
+		left: 80%;
+		transform:translate(-50%, -50%);
+		z-index:10;
+		
+	}
+
+</style>

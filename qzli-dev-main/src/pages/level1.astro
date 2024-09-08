@@ -1,0 +1,149 @@
+---
+function rand(x: any) { return x[num(x.length)] }
+    
+    function num(n: any) { return Math.floor(Math.random() * n) }
+    function exp() { return rand(['a', 'b', 'c']) + ' ' + rand(['+=', '-=', '*=', '/=', '=']) + ' '  + num(10) + ';' }
+    function comp() { return rand(['a', 'b', 'c']) + ' ' + rand(['==', '>=', '<=', '>', '<']) + ' '  + num(10) }
+    
+    function ifs() {
+    let res = `if (${comp()}) {\n`
+    for (let i = 0; i <= num(2); i++) res += `    ${exp()}\n`
+    res += `}`
+    return res;
+    }
+    
+    function loop() {
+    let res = `for (int i = 0; i < ${num(10)}; i++) {\n`
+    for (let i = 0; i <= num(2); i++) res += `    ${exp()}\n`
+    res += `}`
+    return res
+    }
+    
+    function something() {
+    let temp = num(3);
+    if (temp == 0) return '    '.repeat(tabs) + exp().replace(new RegExp('\n', 'g'), '\n' + '    '.repeat(tabs))
+    if (temp == 1) return '    '.repeat(tabs) + ifs().replace(new RegExp('\n', 'g'), '\n' + '    '.repeat(tabs))
+    return '    '.repeat(tabs) + loop().replace(new RegExp('\n', 'g'), '\n' + '    '.repeat(tabs))
+    }
+    
+    function code() {
+    let res = `public class Main {\n    public static void main(String[] args) {\n        int a = ${num(10)};\n        int b = ${num(10)};\n        int c = ${num(10)};\n`
+    tabs += 2
+    for (let i = 0; i <= num(4); i++) res += `\n${something()}\n`
+    res += `\n        System.out.println(a + " " +  b + " " + c);\n    }\n}\n`
+    return res;
+    }
+    
+    let tabs = 0;
+    let bugs = num(3);
+    let output = code()
+    let output_l = output.split(/\r\n|\r|\n/)
+    
+    let answer = []
+    
+    for (let i = 0; i <= bugs; i++) {
+    var x = num(output_l.length);
+    while (!/\S/.test(output_l[x])) {
+    x = num(output_l.length);
+    }
+    
+    answer.push(x)
+    var line = output_l[x]
+    
+    output_l[x] = line.substring(0, line.length - 1);
+    
+    }
+    
+    var question = output_l.join('\n')
+
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+
+    </head>
+
+    <body>
+
+        <pre class="asddd">{question}</pre>
+		
+        <pre class="asddd"> Number of Bugs in above code: </pre>
+        <input id="ads">
+        </input>
+        
+
+        <button type="button" class="asddd" id="asdddd">SUBMIT</button>
+
+        <script define:vars={{bugs}}>
+            document.querySelector("#asdddd").addEventListener("click", test);
+
+        function test() {
+            if (document.getElementById("ads") === null) {
+
+            }else {
+                const ams = document.getElementById("ads")
+                const abdsa = ams.value
+                if (abdsa == bugs) {
+                    window.location = ""
+                }
+            }
+        }
+        </script>
+
+        
+        <!-- <a href="">
+            <div class="asdf">
+                <p>Submit</p>
+            </div>
+        </a> -->
+
+        
+
+
+     <!--   <p>Solve this Code:</p> -->
+
+    </body>
+
+    <style>
+
+    
+        body {
+            background-color:black;
+        }
+        .asdf{
+            background-color: rgb(19, 82, 13);
+            padding:5px;
+            font-family:courier, bold;
+            width: 250px;
+            height: 100px;
+            text-align: center;
+        }
+        .asddd {
+            background-color: white
+        }
+/*
+        .grid-item{
+            grid-column-start:1;
+            grid-column-end:2;
+
+
+        }
+
+        .grid-item1{
+            grid-column-start:1;
+            grid-column-end:6;
+        }
+*/
+        p{
+            font-family:'Courier New', Courier, monospace;
+            font-size: 60px;
+            background-color: white;
+            position:fixed;
+            text-align:right;
+
+        }
+
+    </style>
+    
+</html>

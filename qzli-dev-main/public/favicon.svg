@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="100"
+   height="100"
+   viewBox="0 0 100 100"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1">
+    <rect
+       style="fill:#1e232f;fill-opacity:1;stroke-width:20;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:0"
+       id="rect1"
+       width="100"
+       height="100"
+       x="0"
+       y="0"
+       rx="25"
+       ry="25" />
+    <text
+       xml:space="preserve"
+       style="font-size:80px;font-family:'grand hotel';-inkscape-font-specification:'grand hotel';fill:#fafbfc;fill-opacity:1;stroke-width:20;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:0"
+       x="22.280001"
+       y="59.080002"
+       id="text1"><tspan
+         id="tspan1"
+         x="22.280001"
+         y="59.080002"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;font-family:'Lily Script One';-inkscape-font-specification:'Lily Script One';fill:#fafbfc;fill-opacity:1">q</tspan></text>
+  </g>
+</svg>
